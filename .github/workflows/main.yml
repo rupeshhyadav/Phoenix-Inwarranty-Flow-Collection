@@ -48,11 +48,11 @@ jobs :
         with :
           server_address: smtp.gmail.com
           server_port : 465
-          username : ${{ EMAIL_USERNAME}}
-          password : ${{ EMAIL_PASSWORD}}
+          username : ${{ EMAIL_USERNAME }}
+          password : ${{ EMAIL_PASSWORD }}
           subject : API test execution report
           to : rupesh0101@hotmail.com
-          from : ${{ EMAIL_USERNAME}}
+          from : ${{ EMAIL_USERNAME }}
           body : 
                |
                Hi,
