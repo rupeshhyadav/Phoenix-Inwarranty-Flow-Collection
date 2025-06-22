@@ -33,5 +33,6 @@ jobs :
         with :
             name : Newman report
             path : /newman/*.html
+            include-hidden-files: true
       
         
