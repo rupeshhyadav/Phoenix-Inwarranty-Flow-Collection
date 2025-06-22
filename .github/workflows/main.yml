@@ -41,6 +41,24 @@ jobs :
         with : 
           github_token : ${{ secrets.GITHUB_TOKEN }}
           publish_dir : newman/
+
+      - name : Send email notification
+        if: always()
+        uses : dawidd6/action-send-mail@v6
+        with :
+          server_address: smtp.gmail.com
+          server_port : 465
+          username : ${{ EMAIL_USERNAME}}
+          password : ${{ EMAIL_PASSWORD}}
+          subject : API test execution report
+          to : rupesh0101@hotmail.com
+          from : ${{ EMAIL_USERNAME}}
+          body : 
+               |
+               Hi,
+               Please find the api test execution report here : 
+               https://rupeshhyadav.github.io/Phoenix-Inwarranty-Flow-Collection/
+          
             
       
         
