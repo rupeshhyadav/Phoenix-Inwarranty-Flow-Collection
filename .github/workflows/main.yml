@@ -8,7 +8,7 @@ on :
     - cron : 00 14 * * * 
 jobs : 
   run-postman-tests : 
-    runs-on : ubuntu-latest
+    runs-on : self-hosted
 
     steps : 
       - name : Checkout the code
